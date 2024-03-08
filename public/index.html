@@ -7,6 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Notes</title>
     <style>
+    @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap');
+
       #notes-container {
         margin-top: 20px;
         position: relative;
@@ -21,19 +23,60 @@
         -webkit-transform: rotate(-4deg);
         -o-transform: rotate(-4deg);
         -moz-transform: rotate(-4deg);
-        width: 240px;
+        width: 180px;
         height: auto;
-        min-height: 100px;
+        min-height: 90px;
         position: absolute;
       }
+
+      .text-input{
+        border-radius: 10px;
+        height: 100px;
+        resize: none;
+
+        box-shadow: 0px 7px 0px 0px #a29bfe;
+      }
+
+      .add-note-button{
+        margin-left: 38px;
+        margin-top: -10px;
+
+        border: none;
+        outline: none;
+        background-color: #6c5ce7;
+        padding: 10px 20px;
+        font-size: 12px;
+        font-weight: 700;
+        color: #fff;
+        border-radius: 5px;
+        transition: all ease 0.1s;
+        box-shadow: 0px 5px 0px 0px #a29bfe;
+      }
+
+        .add-note-button:active {
+        transform: translateY(5px);
+        box-shadow: 0px 0px 0px 0px #a29bfe;
+        }
+
+ 
+        button,
+        h3,
+        h1{
+            font-family: "Quicksand", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+        }
+        
     </style>
   </head>
   <body>
-    <h1 style="text-align: center; letter-spacing: 2px">NOTE BOARD</h1>
+    <h1 style="text-align: center; letter-spacing: 2px">GGO - NOTES</h1>
     <h3 style="text-align: center; letter-spacing: 2px">BY MICHAL CZULUK</h3>
     <div id="notes-container"></div>
-    <textarea id="note-input" placeholder="Type your note here..."></textarea>
-    <button id="add-note-btn">Add Note</button>
+    <textarea class="text-input" id="note-input" placeholder="Type your note here..."></textarea>
+    <h5></h5>
+    <button class="add-note-button" id="add-note-btn">Add Note</button>
 
     <script src="/socket.io/socket.io.js"></script>
     <script>
